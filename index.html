@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nirmana Agency | Digital Marketing Agency</title>
+  <meta
+    name="description"
+    content="Nirmana Agency menghadirkan solusi digital marketing berbasis data untuk membantu pertumbuhan brand melalui digital advertising, social media management, creative branding, dan KOL management."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f4fbfc;
+      --surface: rgba(255, 255, 255, 0.78);
+      --surface-strong: #ffffff;
+      --text: #09355d;
+      --muted: #4f6980;
+      --line: rgba(9, 53, 93, 0.12);
+      --blue: #0c72bf;
+      --blue-deep: #0b3f78;
+      --green: #1cc6ba;
+      --green-soft: #83efe2;
+      --shadow: 0 24px 70px rgba(8, 47, 89, 0.12);
+      --radius-xl: 32px;
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --container: min(1160px, calc(100vw - 32px));
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Manrope", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(28, 198, 186, 0.20), transparent 30%),
+        radial-gradient(circle at top right, rgba(12, 114, 191, 0.18), transparent 28%),
+        linear-gradient(180deg, #f8ffff 0%, #eef8fb 45%, #f4fbfc 100%);
+      overflow-x: hidden;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      inset: auto;
+      border-radius: 999px;
+      filter: blur(50px);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    body::before {
+      width: 320px;
+      height: 320px;
+      top: 90px;
+      left: -100px;
+      background: rgba(28, 198, 186, 0.18);
+    }
+
+    body::after {
+      width: 380px;
+      height: 380px;
+      right: -120px;
+      top: 220px;
+      background: rgba(12, 114, 191, 0.16);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: var(--container);
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 110px 0;
+      position: relative;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(28, 198, 186, 0.24);
+      background: rgba(255, 255, 255, 0.7);
+      color: var(--blue-deep);
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      backdrop-filter: blur(14px);
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--green), var(--blue));
+      box-shadow: 0 0 0 6px rgba(28, 198, 186, 0.12);
+    }
+
+    .section-title {
+      margin: 18px 0 16px;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(2rem, 4vw, 3.8rem);
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .section-copy {
+      margin: 0;
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      padding: 18px 0;
+      backdrop-filter: blur(18px);
+      background: rgba(244, 251, 252, 0.72);
+      border-bottom: 1px solid rgba(9, 53, 93, 0.06);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brand img {
+      width: 58px;
+      height: 58px;
+      border-radius: 18px;
+      object-fit: cover;
+      box-shadow: var(--shadow);
+    }
+
+    .brand-text {
+      min-width: 0;
+    }
+
+    .brand-text strong {
+      display: block;
+      font-size: 1rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .brand-text span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-weight: 700;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--blue-deep);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px 24px;
+      border-radius: 999px;
+      font-weight: 800;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      color: #fff;
+      background: linear-gradient(135deg, var(--blue-deep), var(--blue) 55%, var(--green));
+      box-shadow: 0 16px 36px rgba(12, 114, 191, 0.25);
+    }
+
+    .btn-secondary {
+      color: var(--blue-deep);
+      border: 1px solid rgba(12, 114, 191, 0.18);
+      background: rgba(255, 255, 255, 0.72);
+    }
+
+    .hero {
+      padding: 92px 0 80px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.12fr) minmax(320px, 0.88fr);
+      gap: 42px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      margin: 18px 0 20px;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(3.1rem, 8vw, 6.2rem);
+      line-height: 0.94;
+      letter-spacing: -0.06em;
+      max-width: 720px;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(135deg, var(--blue-deep) 0%, var(--blue) 52%, var(--green) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-copy {
+      margin: 0 0 30px;
+      max-width: 640px;
+      color: var(--muted);
+      font-size: 1.1rem;
+      line-height: 1.9;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 34px;
+    }
+
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      max-width: 660px;
+    }
+
+    .metric-card,
+    .panel,
+    .service-card,
+    .client-card,
+    .help-card,
+    .partner-card,
+    .collab-panel,
+    .footer-card {
+      border: 1px solid var(--line);
+      background: var(--surface);
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow);
+    }
+
+    .metric-card {
+      padding: 22px;
+      border-radius: var(--radius-md);
+    }
+
+    .metric-card strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1.65rem;
+      font-family: "Space Grotesk", sans-serif;
+    }
+
+    .metric-card span {
+      color: var(--muted);
+      font-size: 0.94rem;
+      line-height: 1.6;
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 620px;
+      display: grid;
+      place-items: center;
+    }
+
+    .hero-orb {
+      position: absolute;
+      border-radius: 999px;
+      filter: blur(0);
+    }
+
+    .hero-orb.one {
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle at 30% 30%, rgba(28, 198, 186, 0.34), rgba(12, 114, 191, 0.1));
+      top: 30px;
+      right: 10px;
+    }
+
+    .hero-orb.two {
+      width: 280px;
+      height: 280px;
+      background: radial-gradient(circle at 30% 30%, rgba(12, 114, 191, 0.28), rgba(12, 114, 191, 0.04));
+      bottom: 50px;
+      left: 20px;
+    }
+
+    .panel.hero-card {
+      position: relative;
+      width: 100%;
+      padding: 28px;
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(239, 249, 252, 0.92)),
+        linear-gradient(135deg, rgba(28, 198, 186, 0.16), rgba(12, 114, 191, 0.12));
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border-radius: 26px;
+      border: 1px solid rgba(12, 114, 191, 0.12);
+      pointer-events: none;
+    }
+
+    .hero-logo {
+      width: min(100%, 320px);
+      margin: 0 auto 24px;
+      filter: drop-shadow(0 16px 32px rgba(8, 47, 89, 0.18));
+    }
+
+    .trend-box {
+      display: grid;
+      gap: 16px;
+    }
+
+    .trend-line {
+      height: 190px;
+      border-radius: 22px;
+      background:
+        linear-gradient(180deg, rgba(12, 114, 191, 0.05), rgba(28, 198, 186, 0.09)),
+        repeating-linear-gradient(
+          to right,
+          rgba(9, 53, 93, 0.06) 0,
+          rgba(9, 53, 93, 0.06) 1px,
+          transparent 1px,
+          transparent 66px
+        ),
+        repeating-linear-gradient(
+          to bottom,
+          rgba(9, 53, 93, 0.06) 0,
+          rgba(9, 53, 93, 0.06) 1px,
+          transparent 1px,
+          transparent 48px
+        );
+      position: relative;
+      overflow: hidden;
+    }
+
+    .trend-line svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .floating-note {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .mini-panel {
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid rgba(9, 53, 93, 0.08);
+    }
+
+    .mini-panel strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 1.1rem;
+    }
+
+    .mini-panel span {
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    .services-grid,
+    .clients-grid,
+    .help-grid,
+    .partner-grid,
+    .footer-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .services-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      margin-top: 42px;
+    }
+
+    .service-card {
+      position: relative;
+      padding: 28px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+
+    .service-card::after {
+      content: "";
+      position: absolute;
+      inset: auto -30px -40px auto;
+      width: 140px;
+      height: 140px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(28, 198, 186, 0.16), transparent 70%);
+    }
+
+    .service-number {
+      display: inline-flex;
+      margin-bottom: 18px;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.5rem;
+      color: var(--blue);
+    }
+
+    .service-card h3 {
+      margin: 0 0 12px;
+      font-size: 1.5rem;
+    }
+
+    .service-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .clients-layout {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 24px;
+      margin-top: 42px;
+      align-items: start;
+    }
+
+    .client-highlight {
+      padding: 32px;
+      border-radius: var(--radius-xl);
+      min-height: 100%;
+    }
+
+    .client-highlight h3 {
+      margin: 18px 0 12px;
+      font-size: 2rem;
+      line-height: 1.05;
+    }
+
+    .client-highlight p {
+      margin: 0 0 30px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .logo-wall {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .client-card {
+      padding: 24px 20px;
+      border-radius: 22px;
+      min-height: 126px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .client-card strong {
+      font-size: 1.15rem;
+    }
+
+    .client-card span {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .help-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      margin-top: 42px;
+    }
+
+    .help-card {
+      padding: 24px;
+      border-radius: 22px;
+    }
+
+    .help-card strong {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .help-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+
+    .partner-grid {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      margin-top: 42px;
+    }
+
+    .partner-card {
+      padding: 26px 20px;
+      border-radius: 22px;
+      text-align: center;
+      font-weight: 800;
+      color: var(--blue-deep);
+      min-height: 126px;
+      display: grid;
+      place-items: center;
+    }
+
+    .partner-card span {
+      display: block;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.92rem;
+      margin-top: 6px;
+    }
+
+    .collab-panel {
+      padding: 42px;
+      border-radius: 36px;
+      margin-top: 42px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 24px;
+      align-items: center;
+      background:
+        radial-gradient(circle at top right, rgba(28, 198, 186, 0.18), transparent 32%),
+        linear-gradient(135deg, rgba(11, 63, 120, 0.98), rgba(12, 114, 191, 0.92) 55%, rgba(28, 198, 186, 0.84));
+      color: #fff;
+      box-shadow: 0 30px 60px rgba(11, 63, 120, 0.24);
+    }
+
+    .collab-panel .eyebrow {
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .collab-panel .eyebrow::before {
+      background: #fff;
+      box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.14);
+    }
+
+    .collab-panel h2 {
+      margin: 18px 0 12px;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1;
+    }
+
+    .collab-panel p {
+      margin: 0;
+      max-width: 620px;
+      color: rgba(255, 255, 255, 0.82);
+      line-height: 1.9;
+    }
+
+    .collab-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: flex-end;
+    }
+
+    .collab-actions .btn-primary {
+      background: #fff;
+      color: var(--blue-deep);
+      box-shadow: none;
+    }
+
+    .collab-actions .btn-secondary {
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.26);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .footer {
+      padding: 0 0 36px;
+    }
+
+    .footer-card {
+      border-radius: 34px;
+      padding: 36px;
+      background: rgba(255, 255, 255, 0.86);
+    }
+
+    .footer-grid {
+      grid-template-columns: 1.3fr 0.7fr 0.7fr 0.8fr;
+      align-items: start;
+    }
+
+    .footer-brand p,
+    .footer-list a,
+    .footer-list li,
+    .footer-note {
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .footer-brand img {
+      width: 86px;
+      border-radius: 24px;
+      margin-bottom: 18px;
+    }
+
+    .footer-brand strong {
+      display: block;
+      margin-bottom: 14px;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.8rem;
+      line-height: 1;
+    }
+
+    .footer-list h4 {
+      margin: 0 0 14px;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .footer-list ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .footer-note {
+      margin-top: 30px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(9, 53, 93, 0.08);
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    [data-reveal].is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .clients-layout,
+      .collab-panel,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .partner-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .help-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .collab-actions {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 800px) {
+      .header {
+        position: static;
+      }
+
+      .nav {
+        flex-wrap: wrap;
+      }
+
+      .nav-links {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+      }
+
+      .services-grid,
+      .logo-wall,
+      .partner-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 56px;
+      }
+
+      .hero-metrics,
+      .floating-note,
+      .help-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        min-height: auto;
+      }
+
+      .section {
+        padding: 84px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Nirmana Agency">
+        <img src="./logo.jpg" alt="Logo Nirmana Agency">
+        <div class="brand-text">
+          <strong>Nirmana Agency</strong>
+          <span>Digital Marketing & Growth Partner</span>
+        </div>
+      </a>
+      <nav class="nav-links" aria-label="Navigasi utama">
+        <a href="#services">Services</a>
+        <a href="#clients">Client</a>
+        <a href="#who-we-help">Who We Help</a>
+        <a href="#partners">Official Partner With</a>
+        <a href="#collaboration">Kolaborasi</a>
+      </nav>
+      <a class="btn btn-primary" href="#collaboration">Konsultasi Sekarang</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div data-reveal>
+          <span class="eyebrow">Nirmana Agency</span>
+          <h1>
+            Grow your brand with
+            <span>creative strategy and real-time clarity.</span>
+          </h1>
+          <p class="hero-copy">
+            Nirmana Agency adalah agensi digital marketing yang menghadirkan solusi strategis
+            untuk membantu pertumbuhan dan transformasi bisnis di era digital. Dari iklan
+            digital, pengelolaan media sosial, creative branding, hingga kolaborasi dengan KOL,
+            seluruh kampanye dirancang lebih terarah, transparan, dan berbasis data.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#services">Lihat Layanan</a>
+            <a class="btn btn-secondary" href="#clients">Explore Works</a>
+          </div>
+          <div class="hero-metrics">
+            <article class="metric-card">
+              <strong>Real-Time</strong>
+              <span>Akses laporan performa campaign dengan komunikasi yang jelas dan terukur.</span>
+            </article>
+            <article class="metric-card">
+              <strong>Data-Driven</strong>
+              <span>Setiap langkah optimasi diarahkan untuk awareness, traffic, dan conversion.</span>
+            </article>
+            <article class="metric-card">
+              <strong>Creative-Led</strong>
+              <span>Brand tampil kuat lewat konten, visual, dan kolaborasi yang relevan.</span>
+            </article>
+          </div>
+        </div>
+
+        <div class="hero-visual" data-reveal>
+          <div class="hero-orb one"></div>
+          <div class="hero-orb two"></div>
+          <div class="panel hero-card">
+            <img class="hero-logo" src="./logo.jpg" alt="Nirmana Agency Brandmark">
+            <div class="trend-box">
+              <div class="trend-line" aria-hidden="true">
+                <svg viewBox="0 0 500 220" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="trendGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#0b3f78"></stop>
+                      <stop offset="60%" stop-color="#0c72bf"></stop>
+                      <stop offset="100%" stop-color="#1cc6ba"></stop>
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M 20 180 C 80 150, 110 145, 145 120 S 235 70, 280 95 S 350 150, 395 110 S 450 50, 480 18"
+                    fill="none"
+                    stroke="url(#trendGradient)"
+                    stroke-width="10"
+                    stroke-linecap="round"
+                  ></path>
+                  <circle cx="145" cy="120" r="7" fill="#0c72bf"></circle>
+                  <circle cx="280" cy="95" r="7" fill="#1cc6ba"></circle>
+                  <circle cx="480" cy="18" r="9" fill="#0b3f78"></circle>
+                </svg>
+              </div>
+              <div class="floating-note">
+                <div class="mini-panel">
+                  <strong>Paid Media</strong>
+                  <span>Campaign setup, retargeting, dan scaling untuk hasil lebih optimal.</span>
+                </div>
+                <div class="mini-panel">
+                  <strong>Social Growth</strong>
+                  <span>Konten, engagement, dan positioning brand dalam satu ritme kerja.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <span class="eyebrow" data-reveal>Our Services</span>
+        <h2 class="section-title" data-reveal>Strategi digital yang dirancang untuk hasil bisnis nyata.</h2>
+        <p class="section-copy" data-reveal>
+          Kami menggabungkan insight, media planning, creative execution, dan optimasi performa
+          agar brand Anda bisa tampil lebih konsisten, lebih dipercaya, dan lebih mudah tumbuh.
+        </p>
+
+        <div class="services-grid">
+          <article class="service-card" data-reveal>
+            <span class="service-number">01</span>
+            <h3>Periklanan Digital</h3>
+            <p>
+              Merancang dan mengelola kampanye iklan digital di Google Ads dan berbagai media sosial
+              dengan targeting yang tepat untuk meningkatkan awareness, traffic, dan conversion.
+            </p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="service-number">02</span>
+            <h3>Manajemen Media Sosial</h3>
+            <p>
+              Mengelola akun brand secara profesional mulai dari perencanaan konten, desain visual,
+              penulisan caption, hingga interaksi audiens untuk memperkuat engagement.
+            </p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="service-number">03</span>
+            <h3>Branding &amp; Creative Design</h3>
+            <p>
+              Membantu membangun identitas visual brand melalui logo, panduan visual, hingga materi
+              promosi agar tampil konsisten, menarik, dan mudah diingat.
+            </p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="service-number">04</span>
+            <h3>Influencer &amp; KOL Management</h3>
+            <p>
+              Menyambungkan brand dengan talent yang sesuai, mengelola negosiasi, produksi, dan
+              eksekusi kampanye agar kolaborasi lebih relevan dan berdampak.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="clients">
+      <div class="container">
+        <span class="eyebrow" data-reveal>Our Client</span>
+        <h2 class="section-title" data-reveal>Dipercaya untuk memperkuat visibilitas dan performa brand.</h2>
+        <p class="section-copy" data-reveal>
+          Section ini disusun seperti showcase client pada referensi, namun dibuat fleksibel agar
+          Anda bisa mengganti nama brand sesuai portofolio Nirmana Agency kapan saja.
+        </p>
+
+        <div class="clients-layout">
+          <article class="client-highlight panel" data-reveal>
+            <span class="eyebrow">Brand Collaboration</span>
+            <h3>Campaign yang rapi, transparan, dan mudah di-scale.</h3>
+            <p>
+              Kami membantu bisnis dari tahap perencanaan hingga optimasi, dengan pendekatan yang
+              relevan untuk brand lokal, UMKM, perusahaan berkembang, hingga campaign berbasis KOL.
+            </p>
+            <a class="btn btn-secondary" href="#collaboration">Mari Diskusikan Project</a>
+          </article>
+
+          <div class="logo-wall">
+            <article class="client-card" data-reveal>
+              <strong>Retail Brand</strong>
+              <span>Campaign awareness dan promo penjualan lintas platform.</span>
+            </article>
+            <article class="client-card" data-reveal>
+              <strong>F&amp;B Business</strong>
+              <span>Social growth, visual content, dan local audience targeting.</span>
+            </article>
+            <article class="client-card" data-reveal>
+              <strong>Property Project</strong>
+              <span>Lead generation untuk project launching dan open house.</span>
+            </article>
+            <article class="client-card" data-reveal>
+              <strong>Beauty Brand</strong>
+              <span>Creative rollout untuk campaign product education dan conversion.</span>
+            </article>
+            <article class="client-card" data-reveal>
+              <strong>Startup Team</strong>
+              <span>Performance ads dan komunikasi brand yang lebih siap scale up.</span>
+            </article>
+            <article class="client-card" data-reveal>
+              <strong>Corporate Account</strong>
+              <span>Konten profesional dan laporan performa yang real-time.</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="who-we-help">
+      <div class="container">
+        <span class="eyebrow" data-reveal>Who We Help</span>
+        <h2 class="section-title" data-reveal>Beberapa industri yang cocok tumbuh bersama Nirmana.</h2>
+        <p class="section-copy" data-reveal>
+          Kami terbiasa menyusun pendekatan yang berbeda untuk tiap industri, karena perilaku pasar,
+          ritme konten, dan strategi iklannya tidak bisa disamaratakan.
+        </p>
+
+        <div class="help-grid">
+          <article class="help-card" data-reveal>
+            <strong>Retail &amp; Consumer</strong>
+            <p>Untuk brand yang ingin mendorong awareness, promo, dan penjualan harian lebih efektif.</p>
+          </article>
+          <article class="help-card" data-reveal>
+            <strong>Food &amp; Beverage</strong>
+            <p>Membantu brand kuliner tampil lebih menarik dengan konten visual dan campaign lokal.</p>
+          </article>
+          <article class="help-card" data-reveal>
+            <strong>Property &amp; Services</strong>
+            <p>Lead generation dan positioning yang lebih kuat untuk project, jasa, dan konsultasi.</p>
+          </article>
+          <article class="help-card" data-reveal>
+            <strong>Startup &amp; SME</strong>
+            <p>Strategi digital yang efisien bagi bisnis yang sedang membangun traction dan scale.</p>
+          </article>
+          <article class="help-card" data-reveal>
+            <strong>Beauty &amp; Lifestyle</strong>
+            <p>Kombinasi branding, social media, dan KOL untuk memperkuat desirability produk.</p>
+          </article>
+          <article class="help-card" data-reveal>
+            <strong>Education &amp; Community</strong>
+            <p>Komunikasi yang lebih engaging untuk membangun trust, pendaftaran, dan partisipasi.</p>
+          </article>
+          <article class="help-card" data-reveal>
+            <strong>Logistics &amp; Tech</strong>
+            <p>Campaign yang fokus pada kejelasan value, kredibilitas, dan efisiensi lead pipeline.</p>
+          </article>
+          <article class="help-card" data-reveal>
+            <strong>Personal Brand</strong>
+            <p>Menguatkan eksistensi figur, expert, atau founder lewat content strategy yang rapi.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="partners">
+      <div class="container">
+        <span class="eyebrow" data-reveal>Official Partner With</span>
+        <h2 class="section-title" data-reveal>Ekosistem platform yang mendukung aktivasi campaign kami.</h2>
+        <p class="section-copy" data-reveal>
+          Saya susun section ini menyerupai area partner pada referensi. Jika nanti Anda punya partner
+          resmi tertentu, nama atau logo di bawah ini bisa langsung diganti sesuai kebutuhan.
+        </p>
+
+        <div class="partner-grid">
+          <article class="partner-card" data-reveal>Google Ads<span>Search, Display, YouTube</span></article>
+          <article class="partner-card" data-reveal>Meta Ads<span>Instagram &amp; Facebook Campaign</span></article>
+          <article class="partner-card" data-reveal>TikTok Ads<span>Creative-first acquisition</span></article>
+          <article class="partner-card" data-reveal>LinkedIn<span>B2B reach &amp; positioning</span></article>
+          <article class="partner-card" data-reveal>YouTube<span>Video storytelling &amp; reach</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="collaboration">
+      <div class="container">
+        <div class="collab-panel" data-reveal>
+          <div>
+            <span class="eyebrow">Kolaborasi With Me</span>
+            <h2>Mari berkolaborasi dan scale brand Anda dengan arah yang lebih jelas.</h2>
+            <p>
+              Ceritakan target bisnis, channel yang ingin dimaksimalkan, atau tantangan campaign yang
+              sedang dihadapi. Nirmana Agency siap menjadi partner digital marketing yang kreatif,
+              responsif, dan transparan.
+            </p>
+          </div>
+          <div class="collab-actions">
+            <a class="btn btn-primary" href="https://wa.me/6281234567890" target="_blank" rel="noreferrer">Chat WhatsApp</a>
+            <a class="btn btn-secondary" href="mailto:hello@nirmanaagency.com">Email Kami</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-card">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="./logo.jpg" alt="Logo Nirmana Agency">
+            <strong>Nirmana Agency</strong>
+            <p>
+              Digital marketing agency untuk brand yang ingin tumbuh lewat kombinasi strategi,
+              kreativitas, dan eksekusi berbasis data.
+            </p>
+          </div>
+
+          <div class="footer-list">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#services">Periklanan Digital</a></li>
+              <li><a href="#services">Manajemen Media Sosial</a></li>
+              <li><a href="#services">Branding &amp; Creative</a></li>
+              <li><a href="#services">KOL Management</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-list">
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="#clients">Client</a></li>
+              <li><a href="#who-we-help">Who We Help</a></li>
+              <li><a href="#partners">Platform</a></li>
+              <li><a href="#collaboration">Kolaborasi</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-list">
+            <h4>Contact</h4>
+            <ul>
+              <li>hello@nirmanaagency.com</li>
+              <li>+62 812-3456-7890</li>
+              <li>Indonesia</li>
+              <li>@nirmanaagency</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-note">
+          <span>&copy; <span id="year"></span> Nirmana Agency. All rights reserved.</span>
+          <span>Built for a clean, modern, and conversion-ready brand presence.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.18 });
+
+    document.querySelectorAll("[data-reveal]").forEach((element) => {
+      observer.observe(element);
+    });
+  </script>
+</body>
+</html>
